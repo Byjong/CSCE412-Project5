@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <title>Byung Jong Min</title>
+    <link id="mainStyleSheet" rel="stylesheet" href="style1.css">
+</head>
+
+<div>
+    <button onclick="toggleStyleSheet()" class="styleBtn"><img src="Images/cycle.png"></button>
+</div>
+
+<body class="portfolio">
+    <center>
+        <div id="banner">
+            <div class="head_title">
+                <h1>Technical Portfolio</h1>
+            </div>
+        </div>
+    </center>
+
+    <div class="menu">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <button onclick="expand()" class="dropBtn"><i class="fa fa-bars"></i></button>
+        <div id="dropMenu" class="menu-content">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="qualification.html">Qualifications</a>
+            <a href="service.html">Service</a>
+            <a href="ai.html">AI-Generated</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="switch.js"></script>
+
+    <div class="cpu">
+        <h2>Y86 CPU</h2>
+        <div>
+            <img class="y86" src="Images/cpu.png">
+        </div>
+        <p>
+            Created a emulation of an Intel X86 CPU based of computer architecture Y86.<br>
+            We used logisim evolution to design memory & control flow units to work together with I/O
+            systems to create the CPU units that took in <a
+                href="http://web.cse.ohio-state.edu/~reeves.92/CSE2421sp13/PracticeProblemsY86.pdf" target="_blank">
+                Y86 operations</a> to store values in memory and perform basic
+            ALU operations.<br>
+            The entire project was partitioned into each of the main stages that are executed when a CPU is in use.
+            These stages include, in order, Fetch, Decode, Execute, Write Back, Memory, PC Update. <br>
+            We had to write assembly code instruction in a file and then upload the instructions to our digital ROM
+            in order to convert the code into instructions that we could read into registers.<br>
+            Then the values that were read from ROM were to be passed through the circuitry units we designed to
+            actually perform the actions the passed in instructions were intended to do.<br>
+            Then, to verify if the instruction was executed properly we would store the final results of each stage
+            in 1 of the 16 registers in the register file we made for memory.
+        </p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class=" audio">
+        <h2>Audio App</h2>
+        <div>
+            <img class="audio_app" src="Images/audio.png">
+        </div>
+        <p>
+            A personal project that I have made the concept for is an audio application for mobile.<br>
+            It's main use is the same idea as Apple Music, Spotify, Sound Cloud, etc.<br>
+            To play music from you phone for ease of access. However my app isn't meant for streaming
+            music. It is meant to play audio files that you have stored locally on your device to be saved
+            into libraries/playlists that you have created in the app.<br>
+            This is mainly so people can play their own music or any audio they wish to listen to on the go
+            without the need for streaming.<br>
+            I also intend to have some basic audio editing features like Audacity (change Speed, Pitch, Tempo,
+            Volume, Normalize, etc.)
+            to allow users to make those sutle changes they wish to make without having to use other Third-Party
+            applications just for basic edits.
+        </p>
+    </div>
+</body>
+
+</html>
