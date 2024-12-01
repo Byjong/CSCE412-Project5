@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.x
+    commands:
+      - echo Installing dependencies...
+  build:
+    commands:
+      - echo Syncing files to S3...
+      - aws s3 sync ./ s3://cs412bmin.me --delete
+
+artifacts:
+  files:
+    - '**/*'
